@@ -1,0 +1,19 @@
+
+<!-- Directives ngFor ngForIf
+*ngFor="let serverList of servers">
+-->
+
+<button class="btn btn-primary" (click)="addLogArray()">Display details</button>
+
+<p  *ngIf="ieSecretWord"
+    [innerText]="secretWord">
+</p>
+
+<p *ngFor="let log of logDisplay"
+    [ngStyle]="{backgroundColor: getColor(log.contador)}"
+    [ngClass]="{pintaRed : getColor(log.contador) == 'blue'}">{{log.contador}}{{log.data}}</p>
+
+<!--ngFor com index-->
+<p *ngFor="let log of logDisplay; let i = index"
+    [ngStyle]="{backgroundColor: getColor(i+1)}"
+    [ngClass]="{pintaRed : getColor(i+1) == 'blue'}">Index {{i}} - {{log.contador}}{{log.data}}</p>

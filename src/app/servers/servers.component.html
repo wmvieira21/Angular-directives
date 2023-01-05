@@ -1,0 +1,25 @@
+<label>Server name </label>
+<input type="text" class="form-control" (input)="updateServerName($event)">
+<p>{{ serverName }}</p>
+<p [innerText]="serverName"></p>
+<h3></h3>
+
+<!--Property biding [disabled]="!ieEnableButton
+Event biding (click)="onCreateServer()-->
+
+<button class="btn btn-primary" [disabled]="!ieEnableButton" (click)="onCreateServer()">Add Server</button>
+<p [innerText]="ieEnableButton"></p>
+
+<!--String interpolation {{ieEnableButton}}-->
+<p>{{ieEnableButton}}</p>
+
+<!--
+Directives ngIf
+-->
+<p *ngIf="serverCreated; else noServer">{{ serverCreationStatus }}</p>
+<ng-template #noServer>
+    <p>No server was created</p>
+</ng-template>
+
+<app-server></app-server>
+<h3></h3>

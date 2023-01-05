@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="color">
+            <h3>I'm in the AppComponent</h3>
+
+            <!--<app-servers></app-servers>-->
+            <!--selector padrão-->
+
+            <!--<div app-servers></div>-->
+            <!--select [app-servers]-->
+
+            <div class="app-servers"></div>
+            <!--selectar .app-servers-->
+
+            <div app-warning></div>
+
+            <app-sucess-warning></app-sucess-warning>
+
+            <p>Exercise</p>
+            <h3></h3>
+            <label for="">Username: </label>
+            <input class="form-control" type="text" [(ngModel)]="userName">
+            <p>{{userName}}</p>
+            <button [disabled]="userName === ''" (click)="userName = ''">Reset user</button>
+        </div>
+        <h3></h3>
+        <div class="ngFor-exercise"></div>
+</div>

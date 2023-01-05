@@ -1,0 +1,20 @@
+
+<!--Two-Way Data Binding [(ngModel)]="serverId"
+Must import FormsAngular from @angular/forms-->
+<input type="text" class="form-control" [(ngModel)]="serverId">
+<h3></h3>
+
+<!--Not using tow-way (input)="updateServerStatus($event)-->
+<input type="text" class="form-control"
+(input)="updateServerStatus($event)">
+
+<h3></h3>
+
+<!--String Interpolation-->
+<P [ngStyle]="{backgroundColor: getColor()}">Server {{ serverId }} status {{ getStatusServer() }}</P>
+
+<!--Property biding. Porperty name happends to be ngStyle-->
+<P [ngStyle]="{backgroundColor: getColor()}"
+   [ngClass]="{online: serverStatus === 'online'}"
+>Server {{ serverId }} status {{ getStatusServer() }}</P>
+
