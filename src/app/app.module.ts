@@ -8,8 +8,9 @@ import { ServersComponent } from './servers/servers.component';
 import { WarningComponent } from './warning/warning.component';
 import { SucessAlert } from './sucess-alert/sucess-alert.component';
 import { NgForExerciseComponente } from './ngFor/ngFor.component';
-import { BasicHighlightDirective } from './basic-highlight/basic-highlight.directive';
-import { BetterHighlightDirective } from './better-highlight/better-highlight.directive';
+import { BasicHighlightDirective } from './atributeDirective/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './atributeDirective/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './unless.directive';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { BetterHighlightDirective } from './better-highlight/better-highlight.di
     WarningComponent,
     NgForExerciseComponente,
     BasicHighlightDirective,
-    BetterHighlightDirective
+    BetterHighlightDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,

@@ -25,10 +25,30 @@
         </div>
         <h3></h3>
         <div class="ngFor-exercise"></div>
+
+        <!--Using the new atribute directive appBasichighlight\appBetterHighlight creaded
         
-        <!--Using the new atribute directive appBasichighlight\appBetterHighlight creaded-->
+        [highlightColor]="'orange'" 
+        OR
+        defaultColor="red"
+        -->
         <hr>
         <p appBasichighlight>Style me with basic directive</p>
-        <p appBetterHighlight>Style me with a better directive</p>
-        
-</div>
+        <p appBetterHighlight [highlightColor]="'orange'" defaultColor="red">Style me with a better directive</p>
+
+        <!--
+        <ng-template [ngIf]="'true'">
+            <div>teste ngIf property binding [ngIf]=true</div>
+        </ng-template>
+        -->
+
+
+        <!--Using my onw struture directive *appUnless="true"-->
+        <div *appUnless="true">test my onw struture directive appUnless</div>
+
+        <!--ngSwitch example-->
+        <div [ngSwitch]="10">
+            <p *ngSwitchCase="10">Number 10</p>
+            <p *ngSwitchCase="5">Number 5</p>
+        </div>
+    </div>
