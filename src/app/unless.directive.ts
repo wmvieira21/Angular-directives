@@ -5,9 +5,7 @@ import { Directive, Input, TemplateRef, ViewContainerRef } from '@angular/core';
 })
 export class UnlessDirective {
 
-  /*it must have the same name as the selector appUnless
-
-  */
+  /*it must have the same name as the selector appUnless*/
   @Input() set appUnless(condition: boolean) {
     if (condition) {
       this.vcRef.createEmbeddedView(this.templateRef);
